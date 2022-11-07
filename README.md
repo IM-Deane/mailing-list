@@ -1,12 +1,25 @@
-# Setup
+# Project: Golang Mailing list CLI
 
-This project requires a `gcc` compiler installed and the `protobuf` code generation tools.
+## Overview
+
+This is Go CLI microservice that allows a user to interact with a mailing list
+database.
+
+Requests can be made via HTTP or gRPC endpoints.
+
+## Setup
+
+This project requires a `gcc` compiler installed and the `protobuf` code
+generation tools.
 
 ## Install protobuf compiler
 
-Install the `protoc` tool using the instructions available at [https://grpc.io/docs/protoc-installation/](https://grpc.io/docs/protoc-installation/).
+Install the `protoc` tool using the instructions available at
+[https://grpc.io/docs/protoc-installation/](https://grpc.io/docs/protoc-installation/).
 
-Alternatively you can download a pre-built binary from [https://github.com/protocolbuffers/protobuf/releases](https://github.com/protocolbuffers/protobuf/releases) and placing the extracted binary somewhere in your `$PATH`.
+Alternatively you can download a pre-built binary from
+[https://github.com/protocolbuffers/protobuf/releases](https://github.com/protocolbuffers/protobuf/releases)
+and placing the extracted binary somewhere in your `$PATH`.
 
 ## Install Go protobuf codegen tools
 
@@ -21,4 +34,3 @@ protoc --go_out=. --go_opt=paths=source_relative \
   --go-grpc_out=. --go-grpc_opt=paths=source_relative \
   Proto/mail.proto
 ```
-

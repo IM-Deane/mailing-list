@@ -188,6 +188,8 @@ func Serve(db *sql.DB, bind string) {
 	http.Handle("/email/get_batch", GetEmailBatch(db))
 	http.Handle("/email/update", UpdateEmail(db))
 	http.Handle("/email/delete", DeleteEmail(db))
+
+	log.Printf("JSON API server listening on: %v", bind)
 	
 	// init server
 	err := http.ListenAndServe(bind, nil)

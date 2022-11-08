@@ -1,11 +1,15 @@
 # Project: Golang Mailing list CLI
 
-### Overview
+### Overview:
 
 This project is a Go CLI microservice that allows a user to interact with a
 mailing list database.
 
 Requests can be made via two different API endpoints: **HTTP** or **gRPC**.
+
+### Expected outcome:
+
+- [X] Learn how to build and work with a gRPC API.
 
 ### Tech Stack:
 

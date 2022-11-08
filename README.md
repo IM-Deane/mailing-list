@@ -2,15 +2,42 @@
 
 ## Overview
 
-This is Go CLI microservice that allows a user to interact with a mailing list
-database.
+This project is a Go CLI microservice that allows a user to interact with a
+mailing list database.
 
-Requests can be made via HTTP or gRPC endpoints.
+Requests can be made via two different API endpoints: HTTP or gRPC.
 
-## Setup
+### Tech Stack:
 
-This project requires a `gcc` compiler installed and the `protobuf` code
-generation tools.
+- SQLite for data storage
+- Protocol Buffers for communication format
+- gRPC client needed to interact with gRPC server
+
+## Running the project
+
+You can start the gRPC and JSON servers with: `go run ./server`
+
+You can start the gRPC client with: `go run ./client`
+
+## Testing the project:
+
+**JSON:** You can test the JSON API with cURL, Postman, or Thunder Client (a VS
+Code extension)
+
+Example endpoint:
+
+`http://127.0.0.1:8080/email/get`
+
+Can fetch an email from the database using this endpoint.
+
+**gRPC:** You can test the gRPC server via the gRPC client.
+
+`./client/client.go, line 124` has several test requests
+
+## Development Setup
+
+If you wish to fork or edit this project, it requires a `gcc` compiler installed
+and the `protobuf` code generation tools.
 
 ## Install protobuf compiler
 

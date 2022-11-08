@@ -5,7 +5,7 @@
 This project is a Go CLI microservice that allows a user to interact with a
 mailing list database.
 
-Requests can be made via two different API endpoints: HTTP or gRPC.
+Requests can be made via two different API endpoints: **HTTP** or **gRPC**.
 
 ### Tech Stack:
 
